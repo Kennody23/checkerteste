@@ -1,0 +1,218 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<!-- Mirrored from www.authenticgoods.co/themes/quantum-pro/demos/demo5/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 18 Sep 2019 13:01:19 GMT -->
+
+<!-- Mirrored from 191.232.240.15/AcessoLivre/Paypal/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 24 Oct 2019 22:31:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Checker Full Cielo!</title>
+	<!-- ================== GOOGLE FONTS ==================-->
+	<link href="./././fonts.googleapis.com/csse415.css?family=Poppins:300,400,500" rel="stylesheet">
+	<!-- ======================= GLOBAL VENDOR STYLES ========================-->
+	<link rel="stylesheet" href="assets/css/vendor/bootstrap.css">
+	<link rel="stylesheet" href="assets/vendor/metismenu/dist/metisMenu.css">
+	<link rel="stylesheet" href="assets/vendor/switchery-npm/index.css">
+	<link rel="stylesheet" href="assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+	<!-- ======================= LINE AWESOME ICONS ===========================-->
+	<link rel="stylesheet" href="assets/css/icons/line-awesome.min.css">
+	<!-- ======================= DRIP ICONS ===================================-->
+	<link rel="stylesheet" href="assets/css/icons/dripicons.min.css">
+	<!-- ======================= MATERIAL DESIGN ICONIC FONTS =================-->
+	<link rel="stylesheet" href="assets/css/icons/material-design-iconic-font.min.css">
+	<!-- ======================= GLOBAL COMMON STYLES ============================-->
+	<link rel="stylesheet" href="assets/css/common/main.bundle.css">
+	<!-- ======================= LAYOUT STYLES ===========================-->
+	<link rel="stylesheet" href="assets/css/layouts/horizontal/core/main.css">
+	<link rel="shortcut icon" href="assets/img/icon.ico">
+	<!-- ======================= MENU TYPE ===========================-->
+	<link rel="stylesheet" href="assets/css/layouts/horizontal/menu-type/default.css">
+	<!-- ======================= THEME COLOR STYLES ===========================-->
+	<link rel="stylesheet" href="assets/css/layouts/horizontal/themes/theme-a.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		function Mudaestado(el) {
+			var display = document.getElementById(el).style.display;
+			if(display == "none")
+				document.getElementById(el).style.display = 'block';
+			else
+				document.getElementById(el).style.display = 'none';
+		}
+	</script>
+</head>
+
+<body class="layout-horizontal">
+	<!-- START APP WRAPPER -->
+	<div id="app">
+		<div class="content-wrapper">
+			<div class="content container-fluid">
+				<!--START PAGE HEADER -->
+				<header class="page-header">
+					<div class="d-flex align-items-center">
+						<div class="mr-auto">
+							<h1>Checker Full Cielo</h1>
+							<img style="margin-left: 1200px; width:130px" src="https://thumbs.gfycat.com/UnfinishedUnselfishAsianpiedstarling-max-1mb.gif">
+						</div>
+					</div>
+				</header>
+				<!--END PAGE HEADER -->
+				<!--START PAGE CONTENT -->
+				<section class="page-content">
+					<div class="card card-tabs">
+						<div class="card-header">
+							<br>
+							<center>
+								<br>
+								<textarea class="form-control" rows="8" id="listateste" cols="109" style="width: 900px; margin-bottom: 5px"></textarea>
+								<div class="col-9" id="progressbr" style="display: none; margin-bottom: 5px">
+									<div class="progress">
+										<div id="progresstest" name="progresstest" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+									</div>
+								</div>
+							</center>
+							<div id="resultados" style="display:none; margin-left: 170px; margin-bottom: 5px">	Aprovadas <span class="badge badge-success" id="aprovadas">0</span> | Reprovadas <span class="badge badge-danger" id="reprovadas">0</span> | Testadas <span class="badge badge-info" id="testadas">0</span> | Carregadas <span class="badge badge-warning" id="carregadas">0</span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Estado <span class="badge badge-primary" id="estado">Aguardando</span></div>
+							<center>
+								<button class="btn btn-primary" id="iniciarchk">Testar</button> &nbsp; <button class="btn btn-danger" id="pararchk">Parar</button> &nbsp; <button class="btn btn-warning" onclick="limpar()">Limpar</button>
+								<br>
+							</center>
+							<ul class="nav nav-tabs primary-tabs justify-content-center">
+								<li class="nav-item" role="presentation">
+									<a href="#tab-1" class="nav-link active show" data-toggle="tab" aria-expanded="true">Aprovadas</a>
+								</li>
+								<li class="nav-item" role="presentation">
+									<a href="#tab-2" class="nav-link" data-toggle="tab" aria-expanded="true">Reprovadas</a>
+								</li>
+								<li class="nav-item" role="presentation">
+									<a href="#tab-3" class="nav-link" data-toggle="tab" aria-expanded="true">Key queimada</a>
+								</li>
+							</ul>
+						</div>
+						<div class="card-body">
+							<div class="tab-content">
+								<div class="tab-pane fadeIn active" id="tab-1">
+									<div class="table-responsive">
+										<table class="table table-borderless">
+											<thead>
+												<tr>
+													<th>#</th>
+													<th>Cartão</th>
+													<th>Bin</th>
+													<th>Retorno</th>
+													<th>Copyright</th>
+												</tr>
+											</thead>
+											<tbody id="lives">
+
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="tab-pane fadeIn" id="tab-2">
+									<div class="table-responsive">
+										<table class="table table-borderless">
+											<thead>
+												<tr>
+													<th>#</th>
+													<th>Cartão</th>
+													<th>Bin</th>
+													<th>Retorno</th>
+													<th>Copyright</th>
+												</tr>
+											</thead>
+											<tbody id="die">
+
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="tab-pane fadeIn" id="tab-3">
+									<div class="table-responsive">
+										<table class="table table-borderless">
+											<thead>
+												<tr>
+													<th>#</th>
+													<th>Cartão</th>
+													<th>Bin</th>
+													<th>Retorno</th>
+													<th>Copyright</th>
+												</tr>
+											</thead>
+											<tbody id="socksdie">
+
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+
+		</div>
+	</div>
+</div>
+</aside>
+
+<!-- END SIDEBAR QUICK PANNEL WRAPPER -->
+</div>
+<!-- END CONTENT WRAPPER -->
+<!-- START FULL PAGE SEARCH -->
+<svg class="hidden">
+	<defs>
+		<symbol id="icon-cross" viewBox="0 0 24 24">
+			<title>cross</title>
+			<path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+		</symbol>
+	</defs>
+</svg>
+<div class="fullpage-search-wrapper">
+	<button id="button-search-close" class="button button--search-close" aria-label="Close search form"><svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg></button>
+	<form class="search__form" action="#">
+		<input class="search__input" name="search" type="search" placeholder="Search..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+		<span class="search__info">Hit enter to search or ESC to close</span>
+	</form>
+</div>
+<!-- END FULL PAGE SEARCH -->
+<!-- ================== GLOBAL VENDOR SCRIPTS ==================-->
+<script src="script.js" type="text/javascript"></script>
+<script src="assets/vendor/modernizr/modernizr.custom.js"></script>
+<script src="assets/vendor/jquery/dist/jquery.min.js"></script>
+<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/js-storage/js.storage.js"></script>
+<script src="assets/vendor/js-cookie/src/js.cookie.js"></script>
+<script src="assets/vendor/pace/pace.js"></script>
+<script src="assets/vendor/metismenu/dist/metisMenu.js"></script>
+<script src="assets/vendor/switchery-npm/index.js"></script>
+<script src="assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- ================== PAGE LEVEL VENDOR SCRIPTS ==================-->
+<script src="assets/vendor/countup.js/dist/countUp.min.js"></script>
+<script src="assets/vendor/chart.js/dist/Chart.bundle.min.js"></script>
+<script src="assets/vendor/flot/jquery.flot.js"></script>
+<script src="assets/vendor/jquery.flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+<script src="assets/vendor/flot/jquery.flot.resize.js"></script>
+<script src="assets/vendor/flot/jquery.flot.time.js"></script>
+<script src="assets/vendor/flot.curvedlines/curvedLines.js"></script>
+<script src="assets/vendor/datatables.net/js/jquery.dataTables.js"></script>
+<script src="assets/vendor/datatables.net-bs4/js/dataTables.bootstrap4.js"></script>
+<!-- ================== GLOBAL APP SCRIPTS ==================-->
+<script src="assets/js/global/app.js"></script>
+<!-- ================== PAGE LEVEL SCRIPTS ==================-->
+<script src="assets/js/components/countUp-init.js"></script>
+<script src="assets/js/cards/counter-group.js"></script>
+<script src="assets/js/cards/recent-transactions.js"></script>
+<script src="assets/js/cards/monthly-budget.js"></script>
+<script src="assets/js/cards/users-chart.js"></script>
+<script src="assets/js/cards/bounce-rate-chart.js"></script>
+<script src="assets/js/cards/session-duration-chart.js"></script>
+
+</body>
+
+
+<!-- Mirrored from www.authenticgoods.co/themes/quantum-pro/demos/demo5/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 18 Sep 2019 13:03:29 GMT -->
+
+<!-- Mirrored from 191.232.240.15/AcessoLivre/Paypal/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 24 Oct 2019 22:31:43 GMT -->
+</html>
